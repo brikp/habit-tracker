@@ -1,12 +1,10 @@
 module.exports = {
-  parser: "babel-eslint",
+  parser: 'babel-eslint',
   env: {
     browser: true,
     es6: true,
   },
-  extends: [
-    'airbnb',
-  ],
+  extends: ['airbnb', 'plugin:prettier/recommended'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -18,17 +16,22 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-  ],
+  plugins: ['react'],
   rules: {
-    "react/state-in-constructor": ["error", 'never'],
-    "react/jsx-fragments": ["error", 'element'],
-    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
-    'no-unused-expressions': ["error", { "allowTernary": true }],
-    "react/destructuring-assignment": ["error", "always", { "ignoreClassFields": true }],
-    "object-curly-newline": ["error", {
-      "ObjectPattern": { "multiline": true, "minProperties": 6 }
-  }]
+    'react/state-in-constructor': ['error', 'never'],
+    'react/jsx-fragments': ['error', 'element'],
+    'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx'] }],
+    'no-unused-expressions': ['error', { allowTernary: true }],
+    'react/destructuring-assignment': [
+      'error',
+      'always',
+      { ignoreClassFields: true },
+    ],
+    'object-curly-newline': [
+      'error',
+      {
+        ObjectPattern: { multiline: true, minProperties: 6 },
+      },
+    ],
   },
 };
