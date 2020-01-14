@@ -16,8 +16,9 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['react'],
+  plugins: ['react', 'prettier'],
   rules: {
+    'prettier/prettier': ['error'],
     'react/state-in-constructor': ['error', 'never'],
     'react/jsx-fragments': ['error', 'element'],
     'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx'] }],
